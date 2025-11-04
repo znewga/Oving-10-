@@ -1,0 +1,95 @@
+Overordnet oppgavebeskrivelse
+Emne- og studieplanrevisjon er en prosess som skjer hver høst. Studieprogramlederne og de
+som underviser emnene ser på de ulike emnene og studieprogrammene våre og ser om det er
+noe som skal endres, både i studieprogrammene og i de enkelte emnene. Mange av emnene
+brukes på flere studieprogrammer, og en endring i ett emne kan derfor påvirke mange
+studieprogrammer. Dette gjelder særlig om et emne flyttes fra høst til vår eller motsatt.
+Dette prosjektet går ut på å lage et forenklet system for å lagre og redigere studieplaner. I del 2
+skal dere utvide systemet fra del 1 ved å bruke klasser og objekter samt håndtere flere ulike
+studieprogrammer.
+Oppgaver:
+I del 2 av prosjektet skal dere utvide programmet på følgende vis:
+
+a) Klasse for emner: I stedet for å lagre emnedata i flere lister skal dere lage en klasse for
+et emne og lagre emnene i ei enkelt liste. Emneklassen skal i tillegg til emnekode, semester og studiepoeng inneholde et navn på emnet. Hvis dere ønsker kan dere også legge til flere ting slik som eksamensform og emnebeskrivelse. Skriv om kode fra del 1
+slik at den behandler emne-objekter i stedet for flere lister. Tenk over hvilke av funksjonene dere lagde i del 1 som bør være metoder i emneklassen og hvilke som fortsatt skal være vanlige funksjoner.
+Merk at semester i Emne-klassen skal være «H» for høst og «V» for vår. Samme emne kan fint gå i 1. semester i ett studieprogram og i 3. semester i et annet studieprogram, men
+kan ikke gå i 1. semester (et høstsemester) i ett studieprogram og 2. semester (et vårsemester) i et annet studieprogram.
+
+b) Flere studieplaner: Lag en klasse for en studieplan. En studieplan skal ha en id, en tittel og lister med emner for hvert semester tilsvarende studieplanen fra del 1. Tenk over
+hvilke av funksjonene dere lagde i del 1 som bør være metoder i studieplan-klassen og hvilke som fortsatt skal være vanlige funksjoner.
+
+c) Lag nye og oppdaterte menyvalg: Se den nye menyen oppgitt under, med beskrivelse av menyvalgene. Merk at alle emnelister fra del 1 skal bruke Emne-objekter i stedet for de tidligere løsningene for å lagre referanser til emner eller data om emner. Merk at alle
+menyvalg som i del 1 handlet om det ene studieprogrammet nå skal la brukeren velge studieprogram og skal bruke objekter av studieplan-klassen.
+
+d) Frivillig: Gjør emnekode til en egenskap i emne-klassen som bare kan leses og ikke redigeres etter at emnet er opprettet.
+
+Menyvalg for del 2:
+Her er menyvalgene for det endelige systemet.
+1. Lag et nytt emne
+2. Legg til et emne i en studieplan
+3. Fjern et emne fra en studieplan
+4. Skriv ut ei liste over alle registrerte emner
+5. Lag en ny tom studieplan
+6. Skriv ut en studieplan med hvilke emner som er i hvert semester
+7. Sjekk om en studieplan er gyldig eller ikke
+8. Finn hvilke studieplaner som bruker et oppgitt emne
+9. Lagre emnene og studieplanene til fil
+10. Les inn emnene og studieplanene fra fil
+11. Avslutt
+
+
+
+Beskrivelse av hvert valg
+
+
+1. Lag et nytt emne: Emnene skal lagres som objekter av klassen Emne i ei liste med slike
+objekter. Ellers som del 1.
+
+Fra del 1:"Et emne skal ha minimum en emnekode, om emnet undervises høst
+eller vår, og antall studiepoeng. Dere kan lagre dette i tre lister, en for emnekoder, en for semester (høst eller vår) og en for antall studiepoeng, og hvor samme indeks i de tre listene representerer samme emne."
+
+
+2. Legg til et emne i en studieplan: Brukeren skal få velge hvilken studieplan emnet skal
+legges til, ellers som del 1. Et emne kan legges til flere studieplaner.
+
+Fra del 1:"En studieplan består av seks semester nummeret 1-6
+hvor semester 1, 3 og 5 er høstsemester og semester 2, 4 og 6 er vårsemestre. Hvert semester kan representeres som ei liste med indekser inn i emne-listene. Dere skal også sjekke at et emne er lovlig i det semesteret brukeren prøver å legge det inn i. Det involverer følgende:
+Sjekk at emnet ikke allerede er med i studieplanen. Et emne skal bare kunne legges til en gang. Sjekk at emnet legges til i et gyldig semester. Høstemner skal bare kunne legges til i semester 1, 3 eller 5. Våremner skal bare kunne legges til i semester 2, 4 eller 6. Sjekk at det er plass i semesteret til emnet. Et semester skal inneholder
+maksimalt 30 studiepoeng med emner."
+
+3. Fjern et emne fra en studieplan: Som frivillig menyvalg 10 fra del 1 bortsett fra at
+brukeren skal velge hvilket studieprogram emnet skal fjernes fra.
+
+Var ikke en del av Del 1.
+
+4. Skriv ut ei liste over alle registrerte emner: Som del 1 bortsett fra bruk av Emne-klasse.
+
+Var ikke en del av Del 1.
+
+5. Lag en ny tom studieplan: En studieplan skal minimum ha en id, en tittel, og lister med emner for hvert semester tilsvarende studieplanen fra del 1. Emnelistene skal starte
+tomme.
+
+Fra del 1:"En studieplan er bare gyldig hvis hvert av de
+seks semestrene inneholder 30 studiepoeng emner. Er ikke studieplanen gyldig, skriv ut
+hvilke semestre som ikke er gyldige og hvor mange studiepoeng emner det er i det
+semesteret."
+
+6. Skriv ut en studieplan med hvilke emner som er i hvert semester: Brukeren skal oppgi hvilken studieplan som skal skrives ut, ellers som del 1.
+
+Fra del 1:"Lag ei eller flere tekstfiler med denne
+informasjonen, det er opp til dere å finne ut hvilket format denne fila skal ha"
+
+7. Sjekk om en studieplan er gyldig eller ikke: Brukeren skal oppgi hvilken studieplan som skal sjekkes, ellers som del 1.
+
+Fra del 1:"Denne skal lese samme fil som bel skrevet i
+punkt 6."
+
+8. Finn hvilke studieplaner som bruker et oppgitt emne: Brukeren skal oppgi emnekode til et emne og så skal systemet skrive ut tittel på alle studieplaner som bruker dette
+emnet.
+
+9. Lagre emnene og studieplanene til fil
+
+10. Les inn emnene og studieplanene fra fil
+
+11. Avslutt
